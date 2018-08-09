@@ -1,0 +1,6 @@
+*.iml
+*.idea
+mina.toml
+bin
+/target/
+**/*.rs.bk

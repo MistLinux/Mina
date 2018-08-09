@@ -1,0 +1,31 @@
+---
+name: foo
+version: 0.0.1
+pkg_rel: "1"
+source: "."
+maintainers:
+  - name: test name 1
+    email: "test1@example.com"
+    role: Maintainer
+  - name: test name 2
+    email: "test2@example.com"
+    role: Contributor
+tags:
+  - Core
+  - package manager
+dependencies:
+  required:
+    - glibc
+    - clang
+  optional:
+    - ""
+package:
+  gpg_sign: true
+  hash: false
+  pre_build:
+    - cd foo
+    - make check
+  build:
+    - make build
+  post_build:
+    - echo blarge
