@@ -1,11 +1,14 @@
-use self::parser::minaparser;
+use parser::minaparser;
 
-fn get_mina_file() -> minaparser {
+use parser::minaparser::MinaFile;
+
+fn get_mina_file() -> MinaFile {
     //TODO get rid of this just a test file
-    return minaparser::read_mina_file("./bin/mina.yml");
+    return minaparser::read_mina_file("./bin/htop.mina".to_string());
 }
 
-fn getName() {
+pub fn get_name() {
     let mina = get_mina_file();
-    println!("{}", mina.name);
+
+    println!("{}", mina.version);
 }

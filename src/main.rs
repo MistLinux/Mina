@@ -6,16 +6,16 @@ mod config;
 mod parser;
 mod package;
 
-use colored::*;
-use std::string::String;
+// use colored::*;
 
-use config::workspace;
+// use config::workspace;
 use config::conf;
+use package::packager;
 
 fn main() {
 //    println!("Hello, world!");
 
-//    minaparser::print_let();
+    packager::get_name();
 //    println!("{}", "Createing mina file".green());
 //    minaparser::writeToFile();
 //    workspace::create_mina_dir();

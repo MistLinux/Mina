@@ -7,38 +7,38 @@ use std::io::prelude::*;
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct MinaFile {
-    name:String,
-    version:String,
-    pkg_rel:String,
-    provides:String,
-    source:String,
-    maintainers:Vec<Maintainers>,
-    tags:Vec<String>,
-    dependencies: Deps,
-    package:Pkg
+    pub name:String,
+    pub version:String,
+    pub pkg_rel:String,
+    pub provides:String,
+    pub source:String,
+    pub maintainers:Vec<Maintainers>,
+    pub tags:Vec<String>,
+    pub dependencies: Deps,
+    pub package:Pkg
 }
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct Maintainers {
-    name:String,
-    email:String,
-    role:String
+    pub name:String,
+    pub email:String,
+    pub role:String
 }
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct Pkg {
-    gpg_sign:bool,
-    hash:bool,
-    pre_build:Vec<String>,
-    build:Vec<String>,
-    post_build:Vec<String>
+    pub gpg_sign:bool,
+    pub hash:bool,
+    pub pre_build:Vec<String>,
+    pub build:Vec<String>,
+    pub post_build:Vec<String>
 
 }
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct Deps {
-    required:Vec<String>,
-    optional:Vec<String>
+    pub required:Vec<String>,
+    pub optional:Vec<String>
 }
 
 pub fn print_example() {
