@@ -26,15 +26,14 @@ fn pkg_runner(mina:MinaFile) {
     let version  = min.version.clone();
     dlsource::get_source(download);
     pre_build(prebuild, version);
+    println!("blarg", )
 }
 
 fn pre_build(cmds:Vec<String>, version:String) {
 
     for cmd in cmds.iter() {
         let mut presplit = cmd.replace("{VERSION}", version.as_str());
-        let mut  split:Vec<&str> = presplit.split(" ").collect();
-        let mut spl = split.clone();
-        spl.remove(0);
-        Command::new(split[0]).args(spl).spawn().expect("balrg");
+        Command::new("sh").arg("-c").arg(presplit).spawn().expect("balrg");
     }
+    println!("finished prbild");
 }
