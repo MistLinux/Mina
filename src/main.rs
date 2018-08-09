@@ -1,7 +1,7 @@
 #[macro_use]
 extern crate serde_derive;
-extern crate colored;
-
+// extern crate colored;
+extern crate curl;
 mod config;
 mod parser;
 mod package;

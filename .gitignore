@@ -4,3 +4,4 @@ mina.toml
 bin
 /target/
 **/*.rs.bk
+htop*

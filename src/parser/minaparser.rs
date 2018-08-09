@@ -5,7 +5,7 @@ use std::fs::File;
 use std::io::Write;
 use std::io::prelude::*;
 
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, PartialEq, Serialize, Deserialize, Clone)]
 pub struct MinaFile {
     pub name:String,
     pub version:String,
@@ -18,14 +18,14 @@ pub struct MinaFile {
     pub package:Pkg
 }
 
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, PartialEq, Serialize, Deserialize, Clone)]
 pub struct Maintainers {
     pub name:String,
     pub email:String,
     pub role:String
 }
 
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, PartialEq, Serialize, Deserialize, Clone)]
 pub struct Pkg {
     pub gpg_sign:bool,
     pub hash:bool,
@@ -35,7 +35,7 @@ pub struct Pkg {
 
 }
 
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, PartialEq, Serialize, Deserialize, Clone)]
 pub struct Deps {
     pub required:Vec<String>,
     pub optional:Vec<String>
